@@ -86,7 +86,7 @@ sophiaevent_output sophia_interface::sophiaevent(bool onProton, double Ein, doub
   const double pi = 3.141592653;
 
   if (declareChargedPionsStable) {
-    // IDB[5] = 0;  // pi0 = stable
+    IDB[5] = 0;  // pi0 = stable
     IDB[6] = 0;  // pi+ = stable
     IDB[7] = 0;  // pi- = stable
   }
