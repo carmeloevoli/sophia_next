@@ -1,11 +1,11 @@
 #ifndef SOPHIA_DATA_H
 #define SOPHIA_DATA_H
 
-/* 
+/*
     SOPHIA supports 49 particles, listed in the subsequently.
 
     scheme: 'particle name' : (SOPHIA/SIBYLL id , PDG id)
-    
+
         'gamma'   : (1, 22),
         'e+'      : (2, -11),
         'e-'      : (3, 11),
@@ -57,11 +57,7 @@
         'Omega-'  : (49, 3334),
 */
 
-
-
 /* SOPHIA data block */
-
-
 
 //--------------------------------------------------------------------------------------
 // these arrays contain particle data for the 49 particles known to SOPHIA.
@@ -71,13 +67,21 @@
 extern double AM[49];  // particle masses in GeV
 extern int IBAR[49];   // baryon numbers
 extern int ICHP[49];   // charges
-extern int IDB[49];    // if entry > 0 -> particle is declared stable. all default numbers > 0 in this array are the particle IDs to remind the reader of the function of that array entry
+extern int
+    IDB[49];  // if entry > 0 -> particle is declared stable. all default numbers > 0 in this array
+              // are the particle IDs to remind the reader of the function of that array entry
 
 //--------------------------------------------------------------------------------------
-// used by DECPAR_nonZero only which is a function that executes particle decays (of the 49 particles avilable)
-extern double CBR[102];  // containing numbers in [0,1]. I seems like these are probabilities for decay channels
-extern int KDEC[612];    // length is 6x larger than length of CBR. Entries correspond to particle IDs of decay products (in units of 6 possible particles per decay). These decays are likely to occur with probability CBR
-extern int LBARP[49];    // contains SIBYLL anti-particle IDs. Due to the nature of how particles are listed, some anti-particles are contained already. Also, some listed particles might not have an anti-particle
+// used by DECPAR_nonZero only which is a function that executes particle decays (of the 49
+// particles avilable)
+extern double CBR[102];  // containing numbers in [0,1]. I seems like these are probabilities for
+                         // decay channels
+extern int KDEC[612];  // length is 6x larger than length of CBR. Entries correspond to particle IDs
+                       // of decay products (in units of 6 possible particles per decay). These
+                       // decays are likely to occur with probability CBR
+extern int LBARP[49];  // contains SIBYLL anti-particle IDs. Due to the nature of how particles are
+                       // listed, some anti-particles are contained already. Also, some listed
+                       // particles might not have an anti-particle
 
 //--------------------------------------------------------------------------------------
 // used RES_DECAY3 only
@@ -123,15 +127,11 @@ extern int ELIMITSn[9];
 extern double RESLIMp[36];
 extern double RESLIMn[36];
 
-
-
 /* JETSET data block */
 
+// block data LUDATA. Purpose: to give default values to parameters and particle and decay data.
 
-
-// block data LUDATA. Purpose: to give default values to parameters and particle and decay data. 
-
-// LUDAT1, containing status codes and most parameters. 
+// LUDAT1, containing status codes and most parameters.
 extern int MSTU[200];
 extern double PARU[200];
 extern int MSTJ[200];
