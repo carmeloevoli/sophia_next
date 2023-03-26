@@ -13,7 +13,7 @@ add_library(sophianext SHARED
 # ----------------------------------------------------------------------------
 # Python
 # ----------------------------------------------------------------------------
-option(ENABLE_PYTHON "Create python library via Pybind11" ON)
+option(ENABLE_PYTHON "Create python library via Pybind11" OFF)
 find_package(PythonInterp)
 find_package(PythonLibs)
 
