@@ -1,2 +1,5 @@
+.clang-format
+.vscode
+*.code-workspace
 build
 lib/gtest
