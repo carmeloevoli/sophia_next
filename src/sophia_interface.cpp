@@ -101,7 +101,7 @@ sophiaevent_output sophia_interface::sophiaevent(bool onProton, double Ein, doub
     std::cout << "sophiaevent: theta > 1.: " << theta << std::endl;
     theta = 0.;
   } else if (theta < -1.) {
-    std::cout << "sophiaevent: theta > 1.: " << theta << std::endl;
+    std::cout << "sophiaevent: theta < -1.: " << theta << std::endl;
     theta = 180.;
   } else {
     theta = std::acos(theta) * 180. / pi;
