@@ -1,11 +1,11 @@
 cmake_minimum_required(VERSION 3.5)
 project(sohpianext)
 
-set(CMAKE_CXX_FLAGS "-std=c++11")
+set(CMAKE_CXX_FLAGS "-std=c++14")
 
-include_directories(include)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)
 
-add_library(sophianext SHARED
+add_library(sophianext STATIC
 	src/sophia_data.cpp
 	src/sophia_interface.cpp
 )
@@ -71,5 +71,7 @@ endif(ENABLE_TESTING)
 # Executables
 # ----------------------------------------------------------------------------
 
-add_executable(run_sophia src/execute_sophia.cpp)
-target_link_libraries(run_sophia sophianext)
+SET_TARGET_PROPERTIES(sophianext PROPERTIES COMPILE_FLAGS "-O2")
+
+# add_executable(run_sophia src/execute_sophia.cpp)
+# target_link_libraries(run_sophia sophianext)
